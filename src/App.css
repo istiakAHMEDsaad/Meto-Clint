@@ -3,3 +3,10 @@
 body{
     font-family: "Inter", sans-serif;
 }
+header{
+    z-index: 10001 !important;
+}
+
+.btn-primary{
+    @apply px-7 py-2 bg-actionSuccess text-white rounded-md transition-all duration-300 hover:bg-neutralDGrey hover:-translate-y-1;
+}

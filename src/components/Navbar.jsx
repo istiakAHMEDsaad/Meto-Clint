@@ -7,10 +7,6 @@ const Navbar = () => {
   const [isMenueOpen, setIsMenueOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  //TODO2: --------------> Toggle Menue <--------------
-  const toggleMenue = () => {
-    setIsMenueOpen(!isMenueOpen);
-  };
 
   //TODO1: --------------> Scroll Screen <--------------
   useEffect(() => {
@@ -28,6 +24,11 @@ const Navbar = () => {
     };
   });
 
+  //TODO2: --------------> Toggle Menue <--------------
+  const toggleMenue = () => {
+    setIsMenueOpen(!isMenueOpen);
+  };
+
   //*========== Nav Items ==========
   const navItems = [
     { link: 'Home', path: 'home' },
@@ -37,11 +38,11 @@ const Navbar = () => {
     { link: 'Testimonial', path: 'testimonial' },
   ];
   return (
-    <header className='w-full fixed top-0 left-0 right-0'>
+    <header className='w-full bg-white md:bg-transparent fixed top-0 left-0 right-0'>
       <nav
         className={`py-4 px-4 lg:px-14 ${
           isSticky
-            ? 'sticky top-0 left-0 right-0 border-b bg-white transition-all duration-300'
+            ? 'sticky top-0 left-0 right-0 border-b bg-white duration-300'
             : ''
         }`}
       >
@@ -75,11 +76,11 @@ const Navbar = () => {
           <div className='space-x-10 hidden lg:flex items-center'>
             <a
               href='#'
-              className='hidden lg:flex items-center text-primaryPrimary hover:text-neutralDGrey'
+              className='hidden lg:flex items-center text-actionSuccess hover:text-neutralDGrey'
             >
               Login
             </a>
-            <button className='bg-primaryPrimary text-white px-4 py-2 transition-all duration-300 rounded-md hover:bg-neutralDGrey'>
+            <button className='bg-actionSuccess text-white px-4 py-2 transition-all duration-300 rounded-md hover:bg-neutralDGrey'>
               Sign up
             </button>
           </div>
