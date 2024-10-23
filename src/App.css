@@ -8,5 +8,5 @@ header{
 }
 
 .btn-primary{
-    @apply px-7 py-2 bg-actionSuccess text-white rounded-md transition-all duration-300 hover:bg-neutralDGrey hover:-translate-y-1;
+    @apply px-7 py-2 bg-actionSuccess text-white rounded-md transition-all duration-300 hover:bg-neutralDGrey hover:-translate-y-1 cursor-pointer;
 }
